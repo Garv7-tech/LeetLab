@@ -30,7 +30,7 @@ export const executeCode = async (req, res) => {
         const submissions = stdin.map((input) => ({
             source_code,
             language_id,
-            stdin: input
+            stdin: input,
         }))
 
         // Send batch of submissions to judge0

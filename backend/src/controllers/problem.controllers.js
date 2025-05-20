@@ -106,7 +106,7 @@ export const getAllProblems = async (req, res) => {
             new ApiResponse(
                 200,
                 "Message(s) Fetched Successfully",
-                problems
+                {problems}
             )
         )
     } catch (error) {
@@ -129,7 +129,7 @@ export const getProblemById = async (req, res) => {
             new ApiResponse(
                 200,
                 "Message Found Successfully",
-                problem
+                {problem}
             )
         )
     } catch (error) {
@@ -227,7 +227,7 @@ export const updateProblem = async (req, res) => {
             new ApiResponse(
                 200,
                 "Problem updated successfully",
-                updatedProblem
+                {updatedProblem}
             )
         )
     } catch (error) {
@@ -261,7 +261,8 @@ export const deleteProblem = async (req, res) => {
         return res.status(200).json(
             new ApiResponse(
                 200,
-                "Problem Deleted Successfully"
+                "Problem Deleted Successfully",
+                {}
             )
         )
     } catch (error) {
@@ -301,7 +302,8 @@ export const getAllProblemsSolvedByUser = async (req, res) => {
         return res.status(200).json(
             new ApiResponse(
                 200,
-                `${req.user.id} problems fetched successfully`
+                `${req.user.id} problems fetched successfully`,
+                {}
             )
         )
     } catch (error) {
