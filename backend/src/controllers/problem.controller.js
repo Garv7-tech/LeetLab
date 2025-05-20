@@ -5,8 +5,8 @@ import {
     submitBatch
 } from "../libs/judge0.lib.js"
 
-import { ApiResponse } from "../utils/apiResponse.js"
-import { ApiError } from "../utils/apiError.js"
+import { ApiResponse } from "../libs/apiResponse.js"
+import { ApiError } from "../libs/apiError.js"
 
 export const createProblem = async (req, res) => {
     // Destructure problem details from request body
